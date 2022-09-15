@@ -1,0 +1,646 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins';
+    scroll-behavior: smooth;
+}
+h1, h2 p{
+    color: black;
+}
+body{
+    background-color: #dcdcdc;
+    transition: 1s;
+}
+body.dark{
+    background-color: rgb(0, 10, 14);
+    transition: 1s;
+}
+/* body.active h1,h2,p{
+    color: white;
+} */
+body.dark .form-box{
+    background-color: transparent;
+}
+body.dark .form-box .join-box{
+    background-color: transparent;
+}
+body.dark .form-box .join-box img{
+    background-color: transparent;
+}
+body.dark .form-box .comment-intro h1{
+    color: rgb(0, 170, 255);
+}
+body.dark .phone p{
+    color: rgb(0, 170, 255);
+}
+body.dark .mail p{
+    color: rgba(0, 170, 255);
+}
+
+
+/* ---------------------------------
+---------- Navigation bar ----------
+------------------------------------ */
+
+nav{
+    /* width: 100%; */
+    
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    left: 0;
+    background-color: #cdcdcd;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 0 8px 2px;
+}
+body.dark nav{
+    background-color: rgba(3, 24, 34);
+}
+
+/* ------------------- Left bar ------------------- */
+
+.left-nav{
+    margin: 0 3%;
+    display: flex;
+    align-items: center;
+}
+
+#logo{
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    background-color: #cdcdcd;
+    border-radius: 50%;
+}
+
+
+/* ------------------- Middle bar ------------------- */
+
+.middle-nav{
+    display: flex;
+    align-items: center;
+}
+.middle-nav ul{
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    margin-left: 45px;
+}
+.middle-nav ul li{
+    cursor: pointer;
+    padding: 5px;
+    text-transform: capitalize;
+    font-weight: 300;
+}
+body.dark .middle-nav ul li{
+    color: white;
+}
+.middle-nav ul #last-li{
+    display: none;
+}
+
+
+/* ------------------- Right bar ------------------- */
+
+.right-nav{
+    display: flex;
+    align-items: center;
+    margin: 0 3%;
+}
+.right-images{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.right-images #theme{
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    background-color: #cdcdcd;
+    border-radius: 50%;
+}
+.right-images #user{
+    width: 45px;
+    height: 45px;
+}
+
+.menu-box{
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+}
+.menu-box .bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin-top: 5px;
+    transition: 1s;
+}
+.menu-box.active .bar:nth-child(1){
+    transform: translateY(8px) rotate(135deg);
+    transition: 1s;
+}
+.menu-box.active .bar:nth-child(2){
+    opacity: 0;
+    transition: 0.5s;
+}
+.menu-box.active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-135deg);
+    transition-duration: 1s;
+}
+
+/* ---------------------------------------------
+------------------ Hero Style ------------------
+------------------------------------------------ */
+
+.hero{
+    height: 70vh;
+    background-image: url(./images/main/wolf.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    margin-top: 50px;
+}
+
+#welcoming-text{
+    height: 23vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#welcoming-text span{
+    color: darkgreen;
+}
+body.dark #welcoming-text h1{
+    color: #cdcdcd;
+}
+
+
+/* ---------------------------------------------
+------------------ Intro Style -----------------
+------------------------------------------------ */
+
+.intro-container{
+    height: 50vh;
+    margin: 10vh 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+.intro{
+    width: 250px;
+    height: 250px;
+    padding: 0 20px;
+    border-radius: 15px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+body.dark .intro{
+    border: 1px solid #cdcdcd;
+}
+.intro:hover{
+    transform: rotateX(360deg);
+    transition: 1.5s;
+}
+.intro h2{
+    color: black;
+}
+body.dark .intro h2{
+    color: #cdcdcd;
+}
+.intro h2 span{
+    color: darkgreen;
+}
+
+
+#hero2{
+    height: 50vh;
+    background-image: url(./images/main/background-2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+/* -----------------------------------------------
+------------------ Mammals Style -----------------
+-------------------------------------------------- */
+
+
+.title-container{
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 50px;
+    
+}
+body.dark .title-container .title{
+    background-color: rgb(8, 62, 82);
+    color: #cdcdcd;
+}
+.title{
+    width: 200px;
+    height: 120px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 50px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+}
+
+
+
+
+/* Mammals box */
+
+.mammals-big-box{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.animals-container{
+    width: 85%;
+    height: 500px;
+    display: flex;
+    margin: 20px 0;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+body.dark .animals-container{
+    border: 1px solid #cdcdcd;
+}
+.animals-container img{
+    width: 40%;
+    height: 100%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+.animals-container .info{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+body.dark .animals-container .info{
+    color: #cdcdcd;
+}
+.info .info-text{
+    width: 80%;
+    
+}
+.info-text p span{
+    color: green;
+    font-weight: bold;
+}
+
+
+/* Rebtiles box styling starts*/
+
+.Rebtiles-big-box{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+
+/* Birds box  styling starts*/
+.birds-big-box{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+
+/* Birds box styling ends */
+
+
+
+
+
+
+
+
+
+.form-box{
+    width: 85%;
+    height: 75vh;
+    margin: 0 auto;
+    margin-bottom: 400px;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+}
+
+.right-form{
+    width: 50%;
+    height: 100%;
+    border-right: 1px solid;
+}
+body.dark .form-box {
+    border: 1px solid white;
+    color: white;
+}
+.join-box{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(47, 116, 116);
+    display: flex;
+    flex-direction: column;
+
+}
+.comment-intro{
+    width: 100%;
+    height: 60%;
+    padding: 5% 10%;
+}
+.comment-intro p{
+    color: lightgrey;
+    margin-right: 15px;
+}
+.right-form img{
+    width: 100%;
+    height: 40%;
+    background-color: rgb(47, 116, 116);
+}
+body.dark .form-box .right-form .join-box .phone img{
+    border: 1px solid white;
+    background-color: #cdcdcd;
+    border-radius: 20%;
+    padding: 10px;
+}
+body.dark .form-box .right-form .join-box .mail img{
+    border: 1px solid white;
+    background-color: #cdcdcd;
+    border-radius: 20%;
+    padding: 10px;
+}
+.phone{
+    display: flex;
+    align-items: center;
+}
+.phone p{
+    color: black;
+}
+.phone img{
+    width: 30px;
+    height: auto;
+    margin-right: 15px;
+}
+.mail{
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+}
+.mail p{
+    color: black;
+}
+.mail img{
+    width: 30px;
+    height: auto;
+    margin-right: 15px;
+}
+
+
+
+
+
+.left-form{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding:0 5%;
+    background-color: rgb(110, 74, 12);
+}
+.left-form .inputs{
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+}
+.left-form label{
+    margin-left: 10px;
+}
+.input-box{
+    border: 1px solid;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+.inputs input{
+    color: black;
+    font-size: 16px;
+}
+body.dark .form-box .left-form .input-box, .inputs input{
+    border: 1px solid white;
+    color: #cdcdcd;
+}
+.inputs input{
+    width: 80%;
+    height: 30px;
+    margin-left: 10px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+
+#comment-section{
+    width: 100%;
+    height: 180px;
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#comment-section textarea{
+    width: 70%;
+    height: 120px;
+    padding: 20px;
+    outline: none;
+    background-color: transparent;
+    font-size: 18px;
+}
+
+#submit-area{
+    width: 100%;
+    height: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+#submit{
+    width: 70%;
+    height: 30px;
+    background-color: rgb(65, 184, 65);
+    outline: none;
+    border: none;
+}
+
+
+
+
+
+footer{
+    height: 80vh;
+    background-image: url(./images/main/safari.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer h1{
+    color: wheat;
+    text-align: center;
+}
+footer h1 span{
+    color: yellow;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------------------------------
+----------------- Responsive -----------------
+---------------------------------------------- */
+
+@media screen and (Max-width: 800px) {
+
+    .animals-container{
+        flex-direction: column;
+        height: 700px;
+    }
+    .animals-container img{
+        width: 100%;
+        height: 40%;
+        border-radius: 0;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+    }
+    .animals-container .info{
+        width: 100%;
+        height: 60%;
+        border-radius: 0;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+    .info-text h2{
+        text-align: center;
+    }
+    
+}
+
+@media screen and (Max-width: 650px) {
+    .right-nav #user{
+        display: none;
+    }
+    .menu-box{
+        display: block;
+    }
+    body.dark .menu-box .bar{
+        background-color: #cdcdcd;
+    }
+    .middle-nav{
+        position: absolute;
+        top: 80px;
+        width: 100%;
+        height: 100vh;
+        left: 100%;
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.3));
+        justify-content: center;
+        transition: 1s;
+    }
+    body.dark .middle-nav{
+        background-image: linear-gradient(rgba(3, 24, 34,0.5), rgba(3, 24, 34,0.5));
+    }
+    .middle-nav ul{
+        display: block;
+        margin-bottom: 40vh;
+        margin-left: 0;
+        color: rgb(0, 0, 0);
+        text-align: center;
+    }
+    .middle-nav ul li{
+        margin-top: 20px;
+        font-size: 18px;
+        font-weight: 500;
+        color: black;
+        padding: 10px 15px;
+        background-color: #cdcdcd;
+    }
+    body.dark .middle-nav ul li{
+        background-color: rgba(3, 24, 34);
+    }
+    .middle-nav ul #last-li{
+        display: block;
+    }
+    .middle-nav.active{
+        left: 0;
+        transition: 1s;
+    }
+
+    .intro-container{
+        height: 800px;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .animals-container .info{
+        padding-bottom: 20px;
+    }
+
+    .form-box{
+        height: 152vh;
+        display: flex;
+        flex-direction: column;
+    }
+    .right-form{
+        width: 100%;
+        height: 50%;
+        border-right: none;
+        border-bottom: 1px solid;
+    }
+    .left-form{
+        width: 90%;
+        height: 50%;
+     
+    }
+
+}
